@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test application</title>
+
+  <style>
+    .container {
+      text-align: center;
+    }
+
+    #job-description {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Выбери себе профессию</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laboriosam vitae nemo magnam sunt dolores consectetur quibusdam inventore, iste officiis, quisquam accusamus nulla soluta perspiciatis debitis voluptas eos, obcaecati quasi?
+    </p>
+
+    <select name="profession" id="job" onchange="changeProffession()">
+      <option hidden></option>
+      <option value="programmist">Программист</option>
+      <option value="teacher">Учитель</option>
+      <option value="driver">Водитель</option>
+      <option value="tuneiadets">Тунеядец</option>
+    </select>
+
+    <div id="job-description"></div>
+  </div>
+
+  <script>
+
+    const programmer = 'Я буду работать программистом';
+    const teacher = 'Может всё таки программистом?';
+    const driver = 'Я буду работать водителем';
+    const tuneiadets = 'Я буду платить налоги, много налогов';
+
+    function changeProffession() {
+      const e = document.getElementById('job');
+      const value = e.options[e.selectedIndex].value;
+    
+      let jobDescription = '';
+
+      switch (value) {
+        case 'programmist':
+          jobDescription = programmer;
+          break;
+        case 'teacher':
+          jobDescription = teacher;
+          break;
+        case 'driver':
+          jobDescription = driver;
+          break;
+        case 'tuneiadets':
+          jobDescription = tuneiadets;
+          break;
+        default: 
+          jobDescription = '';
+      }
+
+      document.getElementById('job-description').innerHTML = jobDescription;
+    }
+  </script>
+</body>
+</html>
