@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cats Photos</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    height: 80px;
+    line-height: 80px;
+    background-color: pink;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .cats {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 200px;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cat img {
+    height: 150px;
+  }
+
+  .error-message {
+    text-align: center;
+    margin-top: 250px;
+  }
+
+  .logout, .login {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .login {
+    display: none;
+  }
+</style>
+
+<body>
+
+  <header>
+    Cats album
+  </header>
+
+  <div class="cats">
+    <div class="cat">
+      <img src="cat1.jpg" alt="Кот">
+    </div>
+    <div class="cat">
+      <img src="cat2.jpg" alt="Кот">
+    </div>
+    <div class="cat">
+      <img src="cat3.jpg" alt="Кот">
+    </div>
+  </div>
+
+  <div class="error-message">
+    Ошибка входа!
+  </div>
+
+  <div class="logout">
+    <form action="login.html" onsubmit="submitLogout()">
+      <button type="submit">Выход</button>
+    </form>
+  </div>
+
+  <div class="login">
+      <form action="login.html">
+        <button type="submit">Вход</button>
+      </form>
+    </div>
+
+  <script>
+    var correctLogin = "user";
+    var correctPassword = "password";
+
+    var login = localStorage.getItem("login");
+    var password = localStorage.getItem("password");
+
+    if (login === correctLogin && password === correctPassword) {
+      document.getElementsByClassName("cats")[0].style.display = 'flex';
+      document.getElementsByClassName("error-message")[0].style.display = 'none';
+    } else {
+      document.getElementsByClassName("error-message")[0].style.display = 'block';
+      document.getElementsByClassName("logout")[0].style.display = 'none';
+      document.getElementsByClassName("login")[0].style.display = 'block';
+    }
+
+    function submitLogout() {
+      localStorage.setItem('user', '');
+      localStorage.setItem('password', '');
+    }
+
+  </script>
+
+</body>
+</html>
