@@ -89,9 +89,11 @@
     var correctLogin = "user";
     var correctPassword = "password";
 
-    var login = localStorage.getItem("login");
-    var password = localStorage.getItem("password");
+    var url = new URL(window.location.href);
 
+    var login = url.searchParams.get("login");
+    var password = url.searchParams.get("password");
+    
     if (login === correctLogin && password === correctPassword) {
       document.getElementsByClassName("cats")[0].style.display = 'flex';
       document.getElementsByClassName("error-message")[0].style.display = 'none';

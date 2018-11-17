@@ -42,7 +42,7 @@
   </header>
   
   <div class="login">
-    <form action="main.html" onsubmit="submitForm()">
+    <form id="login-form" method="post" onsubmit="submitForm()">
       <div class="form-input">
         <span class="form-label">Логин: </span><input id="login" type="text">
       </div>
@@ -54,12 +54,15 @@
   </div>
 
   <script>
+    function buildUrl(login, password) {
+      return `main.html?login=${login}&password=${password}`;
+    }
+
     function submitForm() {
       var login = document.getElementById("login").value;
       var password = document.getElementById("password").value;
 
-      localStorage.setItem("login", login);
-      localStorage.setItem("password", password);
+      document.getElementById("login-form").action = buildUrl(login, password)
     }
   </script>
   
