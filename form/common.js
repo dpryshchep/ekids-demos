@@ -19,3 +19,14 @@ function submitLogout() {
   localStorage.setItem('user', '');
   localStorage.setItem('password', '');
 }
+
+function buildUrl(login, password) {
+  return `main.html?login=${login}&password=${password}`;
+}
+
+function submitForm() {
+  var login = document.getElementById("login").value;
+  var password = document.getElementById("password").value;
+
+  document.getElementById("login-form").action = buildUrl(login, password)
+}
