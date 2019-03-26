@@ -86,20 +86,20 @@ Ball Bounce
   height: 150px;
   width: 100px;
   left: 45%;
-  -webkit-animation: bounce-ball .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  /*-webkit-animation: bounce-ball .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;*/
   animation: bounce-ball .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
-  -moz-animation: bounce-ball .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
-  -o-animation: bounce-ball .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  /*-moz-animation: bounce-ball .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;*/
+  /*-o-animation: bounce-ball .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;*/
 }
 
 #container2 {
   border: none;
   height: 150px;
   width: 150px;
-  -webkit-animation: ball-container .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  /*-webkit-animation: ball-container .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;*/
   animation: ball-container .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
-  -moz-animation: ball-container .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
-  -o-animation: ball-container .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  /*-moz-animation: ball-container .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;*/
+  /*-o-animation: ball-container .7s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;*/
 }
 
 #ball {
@@ -117,14 +117,17 @@ Ball Bounce
   left: 45%;
   border-radius: 50%;
   background: rgba(20, 20, 20, .1);
-  box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+  box-shadow: 0px 0 20px 35px rgba(20,20,20, .1);
+  /*opacity: .5;*/
 }
 
 .shadow-bounce {
-  -webkit-animation: shadow-bounce .7s cubic-bezier(0.10, 2.40, 0.85, 2.50) infinite;
+  /*-webkit-animation: shadow-bounce .7s cubic-bezier(0.10, 2.40, 0.85, 2.50) infinite;*/
   animation: shadow-bounce .7s cubic-bezier(0.10, 2.40, 0.85, 2.50) infinite;
-  -moz-animation: shadow-bounce .7s cubic-bezier(0.10, 2.40, 0.85, 2.50) infinite;
-  -o-animation: shadow-bounce .7s cubic-bezier(0.10, 2.40, 0.85, 2.50) infinite;
+  /*animation: shadow-fade .7s ease-out infinite;*/
+  /*animation: shadow-bounce .7s ease infinite; - works but need opacity*/
+  /*-moz-animation: shadow-bounce .7s cubic-bezier(0.10, 2.40, 0.85, 2.50) infinite;*/
+  /*-o-animation: shadow-bounce .7s cubic-bezier(0.10, 2.40, 0.85, 2.50) infinite;*/
 }
 
 .ball-roll {
@@ -144,9 +147,11 @@ Ball Bounce
 @keyframes shadow-bounce {
   from, to {
     transform: scale(.35);
-  }
+    opacity: 1;
+ }
   80% {
     transform: scale(.65);
+    opacity: .7;
   }
 }
 
