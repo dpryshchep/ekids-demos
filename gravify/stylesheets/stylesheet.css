@@ -46,7 +46,7 @@ body {
   font-size: 16px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  /*-webkit-font-smoothing: antialiased;*/
 }
 
 p {
@@ -62,10 +62,12 @@ img {
   border: 0px solid #ebebeb;
 
   box-shadow: 0 0 5px #ebebeb;
+/*
   -webkit-box-shadow: 0 0 5px #ebebeb;
   -moz-box-shadow: 0 0 5px #ebebeb;
   -o-box-shadow: 0 0 5px #ebebeb;
   -ms-box-shadow: 0 0 5px #ebebeb;
+*/
 }
 
 p img {
@@ -118,7 +120,6 @@ Ball Bounce
   border-radius: 50%;
   background: rgba(20, 20, 20, .1);
   box-shadow: 0px 0 20px 35px rgba(20,20,20, .1);
-  /*opacity: .5;*/
 }
 
 .shadow-bounce {
@@ -131,10 +132,10 @@ Ball Bounce
 }
 
 .ball-roll {
-  -webkit-animation: ball-roll .7s linear infinite;
+  /*-webkit-animation: ball-roll .7s linear infinite;*/
   animation: ball-roll .7s linear infinite;
-  -wmoz-animation: ball-roll 1.2s ease infinite;
-  -o-animation: ball-roll 1.2s ease infinite;
+  /*-wmoz-animation: ball-roll 1.2s ease infinite;*/
+  /*-o-animation: ball-roll 1.2s ease infinite;*/
 }
 
 /*for some specialty browsers*/
