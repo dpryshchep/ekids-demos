@@ -5,8 +5,8 @@ var ctx = canvas.getContext("2d");
 
 //ball position and size
 var r = 20;
-var x = canvas.width/2;
-var y = canvas.height-r;
+var x = canvas.width / 2;
+var y = canvas.height - r;
 
 //ball motion steps
 var dx = 5;
@@ -15,7 +15,7 @@ var dy = -5;
 //paddle position and size
 var paddleHeight = 20;
 var paddleWidth = 100;
-var paddleX = (canvas.width-paddleWidth)/2;
+var paddleX = (canvas.width - paddleWidth) / 2;
 
 //paddle motion steps
 paddleDX = 7;

@@ -52,7 +52,6 @@ Ball Bounce
   animation: ball-roll .7s linear infinite;
 }
 
-/*for some specialty browsers*/
 @keyframes ball-roll {
   to {
     transform: rotate(-180deg);

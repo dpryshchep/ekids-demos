@@ -3,7 +3,7 @@ const teacher = 'Может всё таки программистом?';
 const driver = 'Я буду работать водителем';
 const tuneiadets = 'Я буду платить налоги, много налогов';
 
-function changeProffession() {
+function changeProfession() {
   const e = document.getElementById('job');
   const value = e.options[e.selectedIndex].value;
 
